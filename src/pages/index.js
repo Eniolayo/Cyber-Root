@@ -1,22 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
-import ctl from "@netlify/classnames-template-literals";
+import Header from "@/components/header";
+import Ads from "@/components/Home/Ads";
+import Expertise from "@/components/Home/Expertise";
+import IntroContent from "@/components/Home/IntroContent";
+import AboutUs from "@/components/Home/AboutUs";
+import { Icon } from "@iconify/react";
+import Objectives from "@/components/Home/Objectives";
 
 export default function Home() {
-  const [changeBg, setChangeBg] = React.useState(false);
   const [showTopBtn, setShowTopBtn] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const changeBackground = () => {
-    if (window.scrollY >= 20) {
-      setChangeBg(true);
-    } else {
-      setChangeBg(false);
-    }
-  };
   React.useEffect(() => {
-    window.addEventListener("scroll", changeBackground);
     window.addEventListener("scroll", () => {
       if (window.scrollY > 400) {
         setShowTopBtn(true);
@@ -35,90 +32,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header changeBg={changeBg} isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Header isOpen={isOpen} setIsOpen={setIsOpen} />
         <IntroContent />
+        <Ads />
+        <Expertise />
+        <AboutUs />
+        <Objectives />
       </main>
     </>
   );
 }
-
-function Header({ isOpen, setIsOpen }) {
-  return (
-    <header className="border-b border-cornflowerBlue">
-      <div className="flex items-center justify-between max-w-[1500px] w-[92%] mx-auto py-6">
-        <Image
-          src="/CyberRoot Logo.png"
-          alt="cyberroot Icon"
-          width={200}
-          height={49}
-          style={{ cursor: "pointer" }}
-        />
-        <ul className="flex items-center w-[32%] justify-between ">
-          {["Services", "Events", "blogs", "training"].map((item) => (
-            <li className="cursor-pointer text-xl capitalize" key={item}>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-        <button className="text-xl bg-brightNavyBlue text-white px-8 py-3 rounded-md">
-          Contact Us
-        </button>
-        {/* <button
-          className="flex flex-col h-12 w-12 border-2
-           border-primary-white rounded justify-center items-center group md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <div
-            className={`${genericHamburgerLine} ${
-              isOpen
-                ? "rotate-45 translate-y-3 group-hover:opacity-100"
-                : "group-hover:opacity-100"
-            }`}
-          />
-          <div
-            className={`${genericHamburgerLine} ${
-              isOpen ? "opacity-0" : "group-hover:opacity-100"
-            }`}
-          />
-          <div
-            className={`${genericHamburgerLine} ${
-              isOpen
-                ? "-rotate-45 -translate-y-3 group-hover:opacity-100"
-                : "group-hover:opacity-100"
-            }`}
-          />
-        </button> */}
-      </div>
-    </header>
-  );
-}
-function IntroContent() {
-  return (
-    <div className="max-w-[1500px] w-[92%] mx-auto">
-      <div className="py-5">
-        <h2 className={mainSectionTextStyle}>
-          Leading the charge against{" "}
-          <span className="font-black">cyber threats.</span>
-        </h2>
-        <p className="max-w-[511px] capitalize font-medium text-2xl mt-6 ">
-          Protect your digital assets from cyber criminals with our cutting-edge
-          cybersecurity solutions.{" "}
-        </p>
-        <button styles={GetInTouchStyles}>Get In Touch</button>
-      </div>
-    </div>
-  );
-}
-const mainSectionTextStyle = ctl(`
-  text-5xl
-  max-w-[530px]
-  leading-l
-  capitalize
-`);
-const GetInTouchStyles = ctl(`
-  py-4
-  px-16
-  font-medium
-  rounded-xl
-  mt-12
-`);
