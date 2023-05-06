@@ -1,18 +1,65 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
+      colors: {
+        brightNavyBlue: "#146BDF",
+        aliceBlue: "#F0F7FF",
+        jordyBlue: "#89B5EF",
+        tuftsBlue: "#3B84E4",
+        sapphire: "#1159BA",
+        yaleBlue: "#0D4795",
+        ateneoBlue: "#0A3670",
+        oxfordBlue: "#07244A",
+        maastrichtBlue: "#04152D",
+        cornflowerBlue: "#629CEA",
+        paleCornflowerBlue: "#B1CEF4",
+      },
+      screens: {
+        s: "500px",
+        sm: "640px",
+        md: "768px",
+        m: "890px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
+      lineHeight: {
+        tight: "1.12rem",
+        s: "1.52rem",
+        m: "1.8rem",
+        l: "3.5rem",
+      },
+      letterSpacing: {
+        m: "2px",
+        l: "5px",
+        xl: "10px",
+        "2xl": "20px",
+        "3xl": "30px",
+        "4xl": "40px",
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "gradient-primary": `linear-gradient(230deg, rgba(49,61,232,1) 59%, rgba(57,143,207,1) 100%)`,
+      },
+      dropShadow: {
+        "6xl": "5px 7px 11px 0px #000000",
+      },
+      extend: {
+        fontFamily: {
+          product: ["var(--productSans-font)", ...fontFamily.sans],
+        },
       },
     },
   },
   plugins: [],
-}
+};

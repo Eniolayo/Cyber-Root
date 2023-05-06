@@ -1,118 +1,124 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import React from "react";
+import Image from "next/image";
+import Head from "next/head";
+import ctl from "@netlify/classnames-template-literals";
 
 export default function Home() {
+  const [changeBg, setChangeBg] = React.useState(false);
+  const [showTopBtn, setShowTopBtn] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 20) {
+      setChangeBg(true);
+    } else {
+      setChangeBg(false);
+    }
+  };
+  React.useEffect(() => {
+    window.addEventListener("scroll", changeBackground);
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        setShowTopBtn(true);
+      } else {
+        setShowTopBtn(false);
+      }
+    });
+  });
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    <>
+      <Head>
+        <title>Cyberroot</title>
+        <meta name="description" content="Generated by create next app" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main>
+        <Header changeBg={changeBg} isOpen={isOpen} setIsOpen={setIsOpen} />
+        <IntroContent />
+      </main>
+    </>
+  );
 }
+
+function Header({ isOpen, setIsOpen }) {
+  return (
+    <header className="border-b border-cornflowerBlue">
+      <div className="flex items-center justify-between max-w-[1500px] w-[92%] mx-auto py-6">
+        <Image
+          src="/CyberRoot Logo.png"
+          alt="cyberroot Icon"
+          width={200}
+          height={49}
+          style={{ cursor: "pointer" }}
+        />
+        <ul className="flex items-center w-[32%] justify-between ">
+          {["Services", "Events", "blogs", "training"].map((item) => (
+            <li className="cursor-pointer text-xl capitalize" key={item}>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <button className="text-xl bg-brightNavyBlue text-white px-8 py-3 rounded-md">
+          Contact Us
+        </button>
+        {/* <button
+          className="flex flex-col h-12 w-12 border-2
+           border-primary-white rounded justify-center items-center group md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <div
+            className={`${genericHamburgerLine} ${
+              isOpen
+                ? "rotate-45 translate-y-3 group-hover:opacity-100"
+                : "group-hover:opacity-100"
+            }`}
+          />
+          <div
+            className={`${genericHamburgerLine} ${
+              isOpen ? "opacity-0" : "group-hover:opacity-100"
+            }`}
+          />
+          <div
+            className={`${genericHamburgerLine} ${
+              isOpen
+                ? "-rotate-45 -translate-y-3 group-hover:opacity-100"
+                : "group-hover:opacity-100"
+            }`}
+          />
+        </button> */}
+      </div>
+    </header>
+  );
+}
+function IntroContent() {
+  return (
+    <div className="max-w-[1500px] w-[92%] mx-auto">
+      <div className="py-5">
+        <h2 className={mainSectionTextStyle}>
+          Leading the charge against{" "}
+          <span className="font-black">cyber threats.</span>
+        </h2>
+        <p className="max-w-[511px] capitalize font-medium text-2xl mt-6 ">
+          Protect your digital assets from cyber criminals with our cutting-edge
+          cybersecurity solutions.{" "}
+        </p>
+        <button styles={GetInTouchStyles}>Get In Touch</button>
+      </div>
+    </div>
+  );
+}
+const mainSectionTextStyle = ctl(`
+  text-5xl
+  max-w-[530px]
+  leading-l
+  capitalize
+`);
+const GetInTouchStyles = ctl(`
+  py-4
+  px-16
+  font-medium
+  rounded-xl
+  mt-12
+`);
