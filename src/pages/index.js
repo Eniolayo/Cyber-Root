@@ -8,6 +8,7 @@ import IntroContent from "@/components/Home/IntroContent";
 import AboutUs from "@/components/Home/AboutUs";
 import { Icon } from "@iconify/react";
 import Objectives from "@/components/Home/Objectives";
+import Services from "@/components/Home/Services";
 
 export default function Home() {
   const [showTopBtn, setShowTopBtn] = React.useState(false);
@@ -38,6 +39,7 @@ export default function Home() {
         <Expertise />
         <AboutUs />
         <Objectives />
+        <Services />
       </main>
     </>
   );

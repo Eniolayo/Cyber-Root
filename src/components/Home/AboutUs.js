@@ -8,11 +8,11 @@ export default function AboutUs() {
           <Image src="/about-us.png" alt="about-us" fill />
         </div>
       </div>
-      <div className="flex-1 flex flex-col items-start gap-4">
+      <div className="flex-1 flex flex-col items-start gap-4 max-w-lg">
         <h3 className="capitalize text-brightNavyBlue font-black text-4xl max-w-md">
           About us
         </h3>
-        <h4 className="capitalize font-bold text-3xl max-w-md">
+        <h4 className="capitalize font-bold text-3xl ">
           To make the cyber world a better and safer place
         </h4>
         <p className="text-xl max-w-lg">
