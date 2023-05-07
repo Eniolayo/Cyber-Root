@@ -35,7 +35,7 @@ export default function Services() {
                 fill
               />
             </div>
-            <div class="space-y-1">
+            <div className="space-y-1">
               <h5 className="text-3xl font-bold text-brightNavyBlue">
                 {itemPreviewed.name}
               </h5>

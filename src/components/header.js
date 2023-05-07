@@ -1,7 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-export default function Header({ isOpen, setIsOpen }) {
+export default function Header() {
+  const [isOpen, setIsOpen] = React.useState(false);
+
   return (
     <header className="border-b border-cornflowerBlue">
       <div className="flex items-center justify-between max-w-[1500px] w-[92%] mx-auto py-6">
