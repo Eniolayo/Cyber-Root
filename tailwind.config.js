@@ -20,6 +20,7 @@ module.exports = {
         sapphire: "#1159BA",
         yaleBlue: "#0D4795",
         gray: "#7B7B7B",
+        lightSilver: "#D9D9D9",
         spanishGray: "#9E9E9E",
         azureishWhite: "#D9E8FD",
         ateneoBlue: "#0A3670",
@@ -57,10 +58,12 @@ module.exports = {
       dropShadow: {
         "6xl": "5px 7px 11px 0px #000000",
       },
-      extend: {
-        fontFamily: {
-          product: ["var(--productSans-font)", ...fontFamily.sans],
-        },
+
+      fontFamily: {
+        product: ["var(--productSans-font)", ...fontFamily.sans],
+      },
+      backgroundImage: {
+        "summit-bg": "url('/summit-bg.png')",
       },
     },
     borderRadius: {

@@ -7,6 +7,8 @@ import Services from "./Services";
 import AboutUs from "./AboutUs";
 import Blog from "./Blog";
 import Newsletter from "./Newsletter";
+import Events from "./Events";
+
 export {
   Partners,
   Expertise,
@@ -17,4 +19,5 @@ export {
   AboutUs,
   Blog,
   Newsletter,
+  Events,
 };
