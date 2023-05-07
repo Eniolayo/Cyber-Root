@@ -19,6 +19,8 @@ module.exports = {
         tuftsBlue: "#3B84E4",
         sapphire: "#1159BA",
         yaleBlue: "#0D4795",
+        gray: "#7B7B7B",
+        spanishGray: "#9E9E9E",
         azureishWhite: "#D9E8FD",
         ateneoBlue: "#0A3670",
         oxfordBlue: "#07244A",

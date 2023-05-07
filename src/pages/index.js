@@ -2,13 +2,18 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 import Header from "@/components/header";
-import Ads from "@/components/Home/Ads";
-import Expertise from "@/components/Home/Expertise";
-import IntroContent from "@/components/Home/IntroContent";
-import AboutUs from "@/components/Home/AboutUs";
 import { Icon } from "@iconify/react";
-import Objectives from "@/components/Home/Objectives";
-import Services from "@/components/Home/Services";
+import {
+  IntroContent,
+  AboutUs,
+  Ads,
+  Expertise,
+  Objectives,
+  Services,
+  Partners,
+  Blog,
+  Newsletter,
+} from "@/components/Home";
 
 export default function Home() {
   const [showTopBtn, setShowTopBtn] = React.useState(false);
@@ -40,6 +45,9 @@ export default function Home() {
         <AboutUs />
         <Objectives />
         <Services />
+        <Partners />
+        <Blog />
+        <Newsletter />
       </main>
     </>
   );
