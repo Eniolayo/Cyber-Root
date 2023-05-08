@@ -20,6 +20,7 @@ module.exports = {
         sapphire: "#1159BA",
         yaleBlue: "#0D4795",
         gray: "#7B7B7B",
+        brightGray: "#EDEDED",
         lightSilver: "#D9D9D9",
         spanishGray: "#9E9E9E",
         azureishWhite: "#D9E8FD",
