@@ -9,13 +9,13 @@ export default function Newsletter() {
           Stay Informed and Protected from Cyber Threats - Subscribe to Our
           Cybersecurity Newsletter Now
         </p>
-        <div className="flex w-fit mx-auto items-center rounded-md bg-white p-1">
+        <div className="flex w-fit flex-col gap-5 s:gap-0 s:flex-row mx-auto items-center rounded-md s:bg-white p-1">
           <input
             type="text"
             placeholder="Enter your email address..."
-            className="text-black placeholder:text-[#000000b2] bg-transparent py-3 px-3 rounded-tl-md rounded-bl-md"
+            className="text-black placeholder:text-[#000000b2] bg-white s:bg-transparent py-3 px-3 s:rounded-tl-md s:rounded-bl-md rounded-md"
           />
-          <button className="bg-brightNavyBlue px-4 py-2 rounded-md">
+          <button className="bg-brightNavyBlue border-white border px-4 py-2 rounded-md">
             Subscribe
           </button>
         </div>

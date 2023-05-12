@@ -5,7 +5,7 @@ export default function Partners() {
   return (
     <div className="bg-brightNavyBlue py-10 space-y-5 text-white">
       <h3 className="text-center font-bold text-4xl">Partners</h3>
-      <div className="flex justify-center items-center gap-36">
+      <div className="flex flex-wrap justify-center md:justify-between w-[80%] max-w-[700px] mx-auto items-center gap-5">
         <div className="w-[280px] h-[85px] relative">
           <Image
             src="/comptia_logo.png"

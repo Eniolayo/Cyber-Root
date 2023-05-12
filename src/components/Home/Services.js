@@ -16,8 +16,8 @@ export default function Services() {
             ultimately solve cyber security problems{" "}
           </h5>
         </div>
-        <div className="flex gap-10 py-10">
-          <div className="w-[45%] gap-4 justify-between items-center self-start grid grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))]">
+        <div className="flex flex-col-reverse lg:flex-row gap-10 py-10">
+          <div className="w-full lg:w-[45%] gap-4 justify-between items-center self-start grid grid-cols-[repeat(auto-fit,_minmax(160px,_1fr))]">
             {ServicesItems.map((item) => (
               <ServiceCard
                 key={item.name}
@@ -33,6 +33,10 @@ export default function Services() {
                 src="/vulnerable-preview-img.png"
                 alt="vulnerable-preview-img"
                 fill
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "top",
+                }}
               />
             </div>
             <div className="space-y-1">

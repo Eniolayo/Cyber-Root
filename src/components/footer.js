@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 export default function Footer() {
   return (
     <footer>
-      <div className="flex gap-10 items-start py-10 w-[92%] max-w-[1500px] mx-auto">
+      <div className="flex gap-10 flex-wrap items-start py-10 w-[92%] max-w-[1500px] mx-auto">
         <Image
           src="/CyberRoot Logo.png"
           alt="cyberroot Icon"
@@ -12,6 +12,7 @@ export default function Footer() {
           height={49}
           style={{ cursor: "pointer" }}
         />
+
         <div className="">
           <h4 className="uppercase text-brightNavyBlue underline mb-3">
             about us

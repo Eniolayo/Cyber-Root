@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 
 export default function Objectives() {
   return (
-    <div className="flex w-[92%] max-w-[1500px] mx-auto py-16 justify-between">
+    <div className="flex w-[92%] flex-wrap justify-center gap-14 max-w-[1500px] mx-auto py-16">
       {[
         {
           heading: "Our Goal",

@@ -3,7 +3,7 @@ export default function Events() {
     <section className="text-center w-[92%] max-w-[1500px] mx-auto space-y-3">
       <h3 className="text-3xl font-black text-brightNavyBlue">Events</h3>
       <p>Discover upcoming events and conferences in Cyberroot</p>
-      <div className="flex gap-3 justify-center">
+      <div className="flex gap-3 justify-center flex-wrap w-[90%] mx-auto">
         {["Webinars", "Workshops", "Seminars", "Conferences"].map((item) => (
           <button
             className="bg-lightSilver rounded-full px-6 py-3 text-lg uppercase"
@@ -13,7 +13,7 @@ export default function Events() {
           </button>
         ))}
       </div>
-      <div className="flex py-10 justify-center gap-10">
+      <div className="flex flex-wrap py-10 justify-center gap-10">
         {Array.from({ length: 3 }).map((_, i) => (
           <div
             className="bg-summit-bg max-w-[315px] rounded-md overflow-hidden text-white bg-no-repeat bg-cover text-left p-5"
