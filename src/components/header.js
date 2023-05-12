@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ctl from "@netlify/classnames-template-literals";
+import { Button } from "./ui";
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -25,7 +26,9 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <button className={ButtonStyle}>Contact Us</button>
+          <Button variant={"secondary"} style={"mt-5 m:mt-0 px-8 py-3 text-xl"}>
+            Contact Us
+          </Button>
         </div>
         <button
           className={HamburgerButtonStyle}
@@ -137,14 +140,8 @@ const genericHamburgerLine = ctl(`
 `);
 
 const ButtonStyle = ctl(`
-  text-xl 
-  bg-brightNavyBlue 
-  mt-5 
-  m:mt-0 
-  text-white 
-  px-8 
-  py-3 
-  rounded-m
+
+  
 `);
 
 const HamburgerButtonStyle = ctl(`
