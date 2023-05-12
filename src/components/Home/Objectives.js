@@ -1,28 +1,11 @@
+import { ObjectivesItems } from "@/constants";
 import { Icon } from "@iconify/react";
+import ctl from "@netlify/classnames-template-literals";
 
 export default function Objectives() {
   return (
-    <div className="flex w-[92%] flex-wrap justify-center gap-14 max-w-[1500px] mx-auto py-16">
-      {[
-        {
-          heading: "Our Goal",
-          paragraph:
-            "Our goals are to continuously innovate, stay ahead of emerging threats, and provide exceptional customer service.",
-          icon: "clarity:target-solid",
-        },
-        {
-          heading: "Our Vision",
-          paragraph:
-            "To be the leading cybersecurity provider in the industry, setting the standard for innovation, reliability, and trust.",
-          icon: "ph:eye",
-        },
-        {
-          heading: "Our Mission",
-          paragraph:
-            "To provide cutting-edge and proactive cybersecurity solutions that protect our clients from evolving threats.",
-          icon: "solar:compass-linear",
-        },
-      ].map((item) => (
+    <div className={ObjectivesWrapperStyle}>
+      {ObjectivesItems.map((item) => (
         <ObjectivesCard
           key={item.heading}
           heading={item.heading}
@@ -35,9 +18,9 @@ export default function Objectives() {
 
   function ObjectivesCard({ heading, paragraph, icon }) {
     return (
-      <div className="bg-azureishWhite max-w-[370px] space-y-8 relative text-center px-14 pt-10 pb-20 rounded-large">
-        <div className="  bg-paleCornflowerBlue block absolute -top-10 right-[50%] w-[100px] h-[100px] translate-x-[50%] z-50 rounded-full ">
-          <span className="bg-brightNavyBlue rounded-full w-[80px] h-[80px] absolute top-2 left-[50%] -translate-x-[50%] flex justify-center items-center">
+      <div className={ObjectivesCardWrapperStyle}>
+        <div className={ObjectiveDecoratorStyle}>
+          <span className={ObjectiveInnerDecoratorStyle}>
             <Icon icon={icon} fontSize={"50px"} color="white" />
           </span>
         </div>
@@ -47,3 +30,51 @@ export default function Objectives() {
     );
   }
 }
+
+const ObjectivesWrapperStyle = ctl(`
+  flex 
+  w-[92%] 
+  flex-wrap 
+  justify-center 
+  gap-14 
+  max-w-[1500px] 
+  mx-auto 
+  py-16
+`);
+const ObjectivesCardWrapperStyle = ctl(`
+  bg-azureishWhite 
+  max-w-[370px] 
+  space-y-8 
+  relative 
+  text-center 
+  px-14 
+  pt-10 
+  pb-20 
+  rounded-large
+`);
+
+const ObjectiveDecoratorStyle = ctl(`
+  bg-paleCornflowerBlue 
+  block 
+  absolute 
+  -top-10 
+  right-[50%] 
+  w-[100px] 
+  h-[100px] 
+  translate-x-[50%] 
+  z-50 
+  rounded-full
+`);
+const ObjectiveInnerDecoratorStyle = ctl(`
+  bg-brightNavyBlue 
+  rounded-full 
+  w-[80px] 
+  h-[80px] 
+  absolute 
+  top-2 
+  left-[50%] 
+  -translate-x-[50%] 
+  flex 
+  justify-center 
+  items-center
+`);
