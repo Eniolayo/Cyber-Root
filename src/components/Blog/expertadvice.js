@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "../ui";
 
 export default function ExpertAdvice() {
   return (
@@ -9,9 +10,9 @@ export default function ExpertAdvice() {
             Protect your digital assets with our advanced cybersecurity
             solutions.
           </h4>
-          <button className="text-brightNavyBlue bg-white px-5 py-4 rounded-md">
+          <Button variant={"tertiary"} style={"px-5 py-4"}>
             Get Expert Advice
-          </button>
+          </Button>
         </div>
         <div className="absolute right-0 w-[50%] h-[400px]">
           <Image

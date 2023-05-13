@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "../ui";
 
 export default function AboutUs() {
   return (
@@ -20,9 +21,9 @@ export default function AboutUs() {
           ultimately solve cyber security problems across their entire
           enterprise and product portfolios.
         </p>
-        <button className="text-xl bg-brightNavyBlue capitalize text-white px-10 py-3 rounded-m">
-          discover more
-        </button>
+        <Button variant={"secondary"} style="px-10 py-3">
+          Discover More
+        </Button>
       </div>
     </section>
   );

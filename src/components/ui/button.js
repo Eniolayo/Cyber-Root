@@ -13,6 +13,7 @@ function ButtonStyle(variant, style) {
         text-brightNavyBlue 
         rounded-m 
         border 
+        text-xl
         border-brightNavyBlue 
         ${style}
       `);
@@ -20,13 +21,21 @@ function ButtonStyle(variant, style) {
       return ctl(`
         bg-brightNavyBlue 
         text-white 
-        rounded-m
+        rounded-m 
+        text-xl
         ${style}
       `);
     case "tertiary":
-
+      return ctl(`
+      text-brightNavyBlue 
+      bg-white 
+      text-xl
+      rounded-md  
+      ${style}
+        `);
     default:
       return ctl(`
+        text-xl
         ${style}
         `);
   }

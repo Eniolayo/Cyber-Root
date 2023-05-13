@@ -1,3 +1,5 @@
+import { Button } from "../ui";
+
 export default function Events() {
   return (
     <section className="text-center w-[92%] max-w-[1500px] mx-auto space-y-3">
@@ -5,12 +7,12 @@ export default function Events() {
       <p>Discover upcoming events and conferences in Cyberroot</p>
       <div className="flex gap-3 justify-center flex-wrap w-[90%] mx-auto">
         {["Webinars", "Workshops", "Seminars", "Conferences"].map((item) => (
-          <button
-            className="bg-lightSilver rounded-full px-6 py-3 text-lg uppercase"
+          <Button
+            style="bg-lightSilver rounded-full px-6 py-3 text-lg uppercase"
             key={item}
           >
             {item}
-          </button>
+          </Button>
         ))}
       </div>
       <div className="flex flex-wrap py-10 justify-center gap-10">

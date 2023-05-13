@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "../ui";
 
 export default function Expertise() {
   return (
@@ -13,9 +14,9 @@ export default function Expertise() {
           gathering, managed cyber security services, strategic IT consulting,
           cyber.
         </p>
-        <button className="text-xl bg-brightNavyBlue text-white px-10 py-3 rounded-m">
-          Learn more
-        </button>
+        <Button variant={"secondary"} style="px-10 py-3">
+          Learn More
+        </Button>
       </div>
       <div className="flex-1 ">
         <div className="relative w-[414px] before:block before:absolute before:bg-brightNavyBlue -translate-x-7 before:translate-x-7 before:translate-y-7 before:rounded-bl-large before:h-full before:w-full h-[322px] ml-auto">

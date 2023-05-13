@@ -1,4 +1,5 @@
 import ctl from "@netlify/classnames-template-literals";
+import { Button } from "../ui";
 
 export default function Newsletter() {
   return (
@@ -17,7 +18,9 @@ export default function Newsletter() {
             placeholder="Enter your email address..."
             className={InputStyle}
           />
-          <button className={ButtonStyle}>Subscribe</button>
+          <Button variant={"secondary"} style={ButtonStyle}>
+            Subscribe
+          </Button>
         </div>
       </div>
     </div>
@@ -61,10 +64,9 @@ const InputStyle = ctl(`
 `);
 
 const ButtonStyle = ctl(`
-  bg-brightNavyBlue 
+  s:text-base 
   border-white 
   border 
   px-4 
-  py-2 
-  rounded-md
+  py-2
 `);
