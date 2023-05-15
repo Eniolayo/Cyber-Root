@@ -22,7 +22,7 @@ export default function Header() {
           <ul className={HeaderWrapperLinkStyle}>
             {["Services", "Events", "blog", "training"].map((item) => (
               <li
-                className="text-base m:text-lg lg:text-xl capitalize"
+                className="text-base m:text-lg lg:text-xl text-white m:text-black capitalize"
                 key={item}
               >
                 <Link href={item}>{item}</Link>

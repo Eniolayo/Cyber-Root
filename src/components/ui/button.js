@@ -27,7 +27,9 @@ function ButtonStyle(variant, style) {
       return ctl(`
       text-brightNavyBlue 
       bg-white 
-      text-xl
+      text-base
+      m:text-lg
+      lg:text-xl
       rounded-md  
       ${style}
         `);
