@@ -1,17 +1,17 @@
 import ctl from "@netlify/classnames-template-literals";
-import { Button } from "../ui";
+import { Button, Heading, Text } from "../ui";
 
 export default function Newsletter() {
   return (
     <div className="bg-brightNavyBlue">
       <div className={NewsletterWrapperStyle}>
-        <h3 className="text-4xl font-black capitalize">
+        <Heading variant={"lg"} styles={"font-black"} level={"h3"}>
           subscribe to our newsletter
-        </h3>
-        <p className="max-w-[653px] mx-auto">
+        </Heading>
+        <Text styles={"max-w-[653px] mx-auto"}>
           Stay Informed and Protected from Cyber Threats - Subscribe to Our
           Cybersecurity Newsletter Now
-        </p>
+        </Text>
         <div className={InputWrapperStyle}>
           <input
             type="text"
@@ -55,6 +55,8 @@ const InputStyle = ctl(`
   text-black 
   placeholder:text-[#000000b2] 
   bg-white 
+  text-sm
+  m:text-base
   s:bg-transparent 
   py-3 
   px-3 

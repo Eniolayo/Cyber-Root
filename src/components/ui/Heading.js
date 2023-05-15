@@ -52,7 +52,6 @@ function HeadingStyle(variant, styles) {
     default:
       return ctl(`
             ${styles}
-            
         `);
   }
 }

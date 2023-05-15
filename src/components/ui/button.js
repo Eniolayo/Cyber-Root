@@ -33,7 +33,6 @@ function ButtonStyle(variant, style) {
         `);
     default:
       return ctl(`
-        text-xl
         ${style}
         `);
   }
