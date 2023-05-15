@@ -1,4 +1,4 @@
 import Button from "./button";
 import Text from "./Text";
-
-export { Button, Text };
+import Heading from "./Heading";
+export { Button, Text, Heading };

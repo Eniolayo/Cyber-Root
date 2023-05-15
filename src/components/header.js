@@ -21,12 +21,18 @@ export default function Header() {
         <div className={HeaderLinkStyle(isOpen)}>
           <ul className={HeaderWrapperLinkStyle}>
             {["Services", "Events", "blog", "training"].map((item) => (
-              <li className="text-xl capitalize" key={item}>
+              <li
+                className="text-base m:text-lg lg:text-xl capitalize"
+                key={item}
+              >
                 <Link href={item}>{item}</Link>
               </li>
             ))}
           </ul>
-          <Button variant={"secondary"} style={"mt-5 m:mt-0 px-8 py-3 text-xl"}>
+          <Button
+            variant={"secondary"}
+            style={"mt-5 m:mt-0 px-8 py-3 text-base m:text-lg lg:text-xl"}
+          >
             Contact Us
           </Button>
         </div>
@@ -139,16 +145,11 @@ const genericHamburgerLine = ctl(`
   duration-300
 `);
 
-const ButtonStyle = ctl(`
-
-  
-`);
-
 const HamburgerButtonStyle = ctl(`
   flex 
   flex-col 
-  h-12 
-  w-12 
+  h-11 
+  w-11 
   border-2 
   rounded 
   justify-center 

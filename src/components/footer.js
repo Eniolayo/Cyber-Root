@@ -27,22 +27,10 @@ export default function Footer() {
         </div>
         <div className="">
           <h4 className="uppercase text-brightNavyBlue underline mb-3">
-            Solutions
-          </h4>
-          <ul>
-            {["Solutions", "Case Studies", "Resources", "FAQs"].map((item) => (
-              <li key={item} className="underline mb-1">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="">
-          <h4 className="uppercase text-brightNavyBlue underline mb-3">
             News and Events
           </h4>
           <ul>
-            {["Blog", "News", "Events"].map((item) => (
+            {["Blog", "Events"].map((item) => (
               <li key={item} className="underline mb-1">
                 {item}
               </li>
@@ -54,16 +42,7 @@ export default function Footer() {
             Contact and Legal
           </h4>
           <ul>
-            {[
-              "Careers",
-              "Partners",
-              "Testimonials",
-              "Privacy Policy",
-              "Terms and Conditions",
-              "Site Map",
-              "Accessibility",
-              "Social Media",
-            ].map((item) => (
+            {["Privacy Policy", "Terms and Conditions"].map((item) => (
               <li key={item} className="underline mb-1">
                 {item}
               </li>

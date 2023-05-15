@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Heading, Text } from "./ui";
 
 export default function BlogCard() {
   return (
@@ -12,15 +13,18 @@ export default function BlogCard() {
         />
       </div>
       <div className="p-7">
-        <span className="uppercase text-gray mb-3">category</span>
-        <h4 className="text-2xl leading-6">
+        <Text styles={"uppercase text-gray mb-3"} isSpan={true}>
+          category
+        </Text>
+
+        <Heading level={"h4"} variant={"m"} styles={"leading-6"}>
           Protecting Your Business from Cyber Attacks
-        </h4>
-        <p className="text-gray leading-none text-sm my-5">
+        </Heading>
+        <Text variant={"sm"} styles={"leading-none text-gray my-5"}>
           In today's digital age, cyber attacks are becoming more sophisticated
           and frequent, making it cruc...
-        </p>
-        <p className="text-gray">22-04-2023</p>
+        </Text>
+        <Text styles={"text-gray"}>22-04-2023</Text>
       </div>
     </div>
   );

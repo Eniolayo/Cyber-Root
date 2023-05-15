@@ -1,6 +1,8 @@
 import { ObjectivesItems } from "@/constants";
 import { Icon } from "@iconify/react";
 import ctl from "@netlify/classnames-template-literals";
+import Heading from "../ui/Heading";
+import { Text } from "../ui";
 
 export default function Objectives() {
   return (
@@ -24,8 +26,10 @@ export default function Objectives() {
             <Icon icon={icon} fontSize={"50px"} color="white" />
           </span>
         </div>
-        <h4 className="text-3xl">{heading}</h4>
-        <p className="text-xl">{paragraph}</p>
+        <Heading level={"h4"} variant={"md"}>
+          {heading}
+        </Heading>
+        <Text variant={"m"}>{paragraph}</Text>
       </div>
     );
   }

@@ -13,7 +13,6 @@ function ButtonStyle(variant, style) {
         text-brightNavyBlue 
         rounded-m 
         border 
-        text-xl
         border-brightNavyBlue 
         ${style}
       `);
@@ -22,7 +21,6 @@ function ButtonStyle(variant, style) {
         bg-brightNavyBlue 
         text-white 
         rounded-m 
-        text-xl
         ${style}
       `);
     case "tertiary":

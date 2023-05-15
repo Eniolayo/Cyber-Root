@@ -10,15 +10,21 @@ export default function IntroContent() {
           Leading the charge against{" "}
           <span className="font-black">cyber threats.</span>
         </h2>
-        <p className="max-w-[511px] capitalize font-medium text-2xl">
+        <p className="max-w-[450px] m:max-w-[511px] capitalize font-medium text-xl m:text-2xl">
           Protect your digital assets from cyber criminals with our cutting-edge
           cybersecurity solutions.{" "}
         </p>
-        <div className="flex gap-10 justify-center m:justify-start">
-          <Button variant={"primary"} style={"px-4 py-3 text-xl"}>
+        <div className="flex flex-col md:flex-row gap-3 md:gap-10 justify-center m:justify-start">
+          <Button
+            variant={"primary"}
+            style={"px-3 m:px-4 py-2 m:py-3 text-base m:text-lg lg:text-xl"}
+          >
             Get Expert Advice
           </Button>
-          <Button variant={"secondary"} style={"px-10 py-3 text-xl"}>
+          <Button
+            variant={"secondary"}
+            style={"px-10 py-3 text-base m:text-lg lg:text-xl"}
+          >
             Contact Us
           </Button>
         </div>
@@ -36,9 +42,12 @@ const IntroTextSectionStyle = ctl(`
   justify-start 
 `);
 const mainSectionTextStyle = ctl(`
-  text-5xl
-  max-w-[530px]
-  leading-l
+  text-4xl
+  m:text-5xl
+  max-w-[430px]
+  lg:max-w-[530px]
+  leading-9
+  lg:leading-l
   capitalize
 `);
 const introSectionWrapperStyle = ctl(`
