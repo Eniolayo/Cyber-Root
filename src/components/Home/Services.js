@@ -5,7 +5,7 @@ import { Button, Heading, Text } from "../ui";
 import ctl from "@netlify/classnames-template-literals";
 
 export default function Services() {
-  const [shownServices, setShownServices] = React.useState(ServicesItems);
+  const [shownServices] = React.useState(ServicesItems);
   const [itemPreviewed, setItemPreviewed] = React.useState(shownServices[0]);
   return (
     <section className="bg-azureishWhite">

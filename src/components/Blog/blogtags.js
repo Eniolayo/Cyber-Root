@@ -4,7 +4,7 @@ export default function BlogTags() {
       {Array.from({ length: 10 }).map((_, i) => (
         <span
           key={i}
-          className="border border-brightNavyBlue text-xl text-brightNavyBlue p-3 uppercase"
+          className="border border-brightNavyBlue text-base m:text-lg lg:text-xl text-brightNavyBlue p-3 uppercase"
         >
           Cybersecurity
         </span>

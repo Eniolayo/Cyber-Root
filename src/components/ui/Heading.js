@@ -22,6 +22,13 @@ function HeadingStyle(variant, styles) {
   switch (variant) {
     case "sm":
       return ctl(`
+            text-lg 
+            m:text-xl
+            capitalize
+            ${styles}
+        `);
+    case "s":
+      return ctl(`
             text-xl 
             m:text-lg
             capitalize
@@ -46,6 +53,14 @@ function HeadingStyle(variant, styles) {
       return ctl(`
             text-3xl 
             m:text-4xl
+            capitalize
+            ${styles}
+        `);
+    case "xl":
+      return ctl(`
+            text-3xl 
+            m:text-4xl
+            lg:text-5xl
             capitalize
             ${styles}
         `);

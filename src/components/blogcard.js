@@ -4,7 +4,7 @@ import { Heading, Text } from "./ui";
 export default function BlogCard() {
   return (
     <div className="border border-spanishGray max-w-[360px] mx-auto">
-      <div className="relative h-[250px]">
+      <div className="relative h-[200px] m:h-[250px]">
         <Image
           src="/blog-img.png"
           alt="blog-img"

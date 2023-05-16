@@ -34,6 +34,13 @@ function TextStyle(variant, styles) {
             md:text-lg 
             ${styles}
         `);
+    case "lg":
+      return ctl(`
+            text-lg 
+            m:text-xl 
+            lg:text-2xl 
+            ${styles}
+        `);
     default:
       return ctl(`
         text-sm   
