@@ -1,12 +1,14 @@
 import ctl from "@netlify/classnames-template-literals";
 import BlogCard from "../blogcard";
+import BlogCardSkeleton from "../blogcardskeleton";
 
-export default function BlogCardSection() {
+export default function BlogCardSection({ posts = [] }) {
   return (
     <section className={BlogCardSectionStyle}>
-      {Array.from({ length: 10 }).map((_, i) => (
-        <BlogCard key={i} />
-      ))}
+      {posts.length == 0 &&
+        Array.from({ length: 10 }).map((_, i) => <BlogCardSkeleton key={i} />)}
+      {posts.length > 0 &&
+        posts.map((item) => <BlogCard key={item.sys.id} item={item} />)}
     </section>
   );
 }

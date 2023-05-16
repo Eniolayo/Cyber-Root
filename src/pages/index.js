@@ -15,8 +15,15 @@ import {
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import UseShowTopBtn from "@/utils/useShowTopBtn";
+const contentful = require("contentful");
 
-export default function Home() {
+const client = contentful.createClient({
+  space: process.env.NEXT_PUBLIC_SPACE,
+  environment: process.env.NEXT_PUBLIC_ENVIRONMENT,
+  accessToken: process.env.NEXT_PUBLIC_ACCESSTOKEN,
+});
+
+export default function Home({ posts }) {
   const [showTopBtn, setShowTopBtn] = UseShowTopBtn();
 
   return (
@@ -36,11 +43,20 @@ export default function Home() {
         <Objectives />
         <Services />
         <Partners />
-        <Blog />
+        <Blog posts={posts} />
         <Events />
         <Newsletter />
         <Footer />
       </main>
     </>
   );
+}
+export async function getStaticProps() {
+  const res = await client.getEntries({
+    content_type: "blogPost",
+  });
+  const posts = await res.items;
+  return {
+    props: { posts },
+  };
 }
