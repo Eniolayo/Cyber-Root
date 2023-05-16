@@ -10,6 +10,7 @@ import {
   BlogRecommendation,
   BlogTags,
 } from "@/components/Blog";
+import { useRouter } from "next/router";
 const contentful = require("contentful");
 
 const client = contentful.createClient({
@@ -18,15 +19,21 @@ const client = contentful.createClient({
   accessToken: process.env.NEXT_PUBLIC_ACCESSTOKEN,
 });
 
-export default function BlogItem({ posts }) {
+export default function BlogItem({ postRes, relatedPosts }) {
+  console.log(postRes);
   return (
     <main>
       <Header />
-      <BlogItemHeader />
-      <BlogImage />
-      <BlogContent />
+      <BlogItemHeader
+        category={postRes.fields.category}
+        title={postRes.fields.title}
+        date={postRes.fields.dateAndTime.slice(0, 10)}
+        authorName={postRes.fields.authorsName}
+      />
+      <BlogImage item={postRes.fields.blogImage} />
+      <BlogContent content={postRes.fields.mainContent} />
       <BlogTags />
-      <BlogRecommendation posts={posts} />
+      <BlogRecommendation posts={relatedPosts} />
       <Footer />
     </main>
   );
@@ -37,7 +44,6 @@ export async function getStaticPaths() {
   });
   const posts = await res.items;
 
-  //creating an array of objects
   const paths = posts.map((item) => {
     return {
       params: { blogItem: `${item.sys.id}` },
@@ -49,12 +55,16 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-export async function getStaticProps() {
-  const res = await client.getEntries({
+export async function getStaticProps({ params }) {
+  const currentUrl = params.blogItem;
+
+  const postRes = await client.getEntry(currentUrl);
+  const tagRes = await client.getEntries({
     content_type: "blogPost",
+    "fields.tags": "frontend",
   });
-  const posts = await res.items;
+  const relatedPosts = await tagRes.items;
   return {
-    props: { posts },
+    props: { relatedPosts, postRes },
   };
 }

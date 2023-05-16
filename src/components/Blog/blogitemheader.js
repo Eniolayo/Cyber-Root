@@ -3,19 +3,27 @@ import { Icon } from "@iconify/react";
 import { Heading } from "../ui";
 import Link from "next/link";
 
-export default function BlogItemHeader() {
+export default function BlogItemHeader({
+  title,
+  category,
+  authorImage,
+  authorName,
+  date,
+  igLink,
+  twitterLink,
+  facebookLink,
+}) {
   return (
     <section className="w-[80%] pt-16 pb-6 mx-auto space-y-5 m:space-y-10">
       <Heading level={"h5"} styles={"text-gray uppercase"}>
-        category
+        {category}
       </Heading>
       <Heading
         level={"h2"}
         variant={"xl"}
         styles={"font-black text-brightNavyBlue max-w-[740px]"}
       >
-        Protecting Your Business from Cyber Attacks: Tips from a Cybersecurity
-        Expert
+        {title}
       </Heading>
       <div className="flex flex-col m:flex-row justify-between gap-5 m:items-center">
         <div className="flex gap-3 items-center">
@@ -24,10 +32,9 @@ export default function BlogItemHeader() {
           </div>
           <div className="space-y-1">
             <Heading level={"h5"} styles={"text-brightNavyBlue"}>
-              Author’s name
+              {authorName}
             </Heading>
-            <h5 className=" text-xl "></h5>
-            <p className="text-gray">22-04-2023</p>
+            <p className="text-gray">{date}</p>
           </div>
         </div>
         <ul className="flex gap-3">

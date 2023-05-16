@@ -1,10 +1,23 @@
 import React from "react";
 import ctl from "@netlify/classnames-template-literals";
 
-export default function Text({ children, variant, styles, isSpan = false }) {
+export default function Text({
+  children,
+  variant,
+  styles,
+  isSpan = false,
+  content = "",
+}) {
   switch (isSpan) {
     case false:
-      return <p className={`${TextStyle(variant, styles)}`}>{children}</p>;
+      return content.length < 2 ? (
+        <p className={`${TextStyle(variant, styles)}`}>{children}</p>
+      ) : (
+        <p
+          className={`${TextStyle(variant, styles)}`}
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      );
 
     case true:
       return (
