@@ -25,7 +25,7 @@ export default function Header() {
                 className="text-base m:text-lg lg:text-xl text-white m:text-black capitalize"
                 key={item}
               >
-                <Link href={item}>{item}</Link>
+                <Link href={"/" + item}>{item}</Link>
               </li>
             ))}
           </ul>
