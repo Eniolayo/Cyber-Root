@@ -1,9 +1,13 @@
 import Image from "next/image";
 import { Heading, Text } from "./ui";
+import Link from "next/link";
 
 export default function BlogCard() {
   return (
-    <div className="border border-spanishGray max-w-[360px] mx-auto">
+    <Link
+      href={"/blog/item"}
+      className="border border-spanishGray max-w-[360px] mx-auto"
+    >
       <div className="relative h-[200px] m:h-[250px]">
         <Image
           src="/blog-img.png"
@@ -26,6 +30,6 @@ export default function BlogCard() {
         </Text>
         <Text styles={"text-gray"}>22-04-2023</Text>
       </div>
-    </div>
+    </Link>
   );
 }
