@@ -29,12 +29,14 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <Button
-            variant={"secondary"}
-            style={"mt-5 m:mt-0 px-8 py-3 text-base m:text-lg lg:text-xl"}
-          >
-            Contact Us
-          </Button>
+          <Link href={"/contact-us"}>
+            <Button
+              variant={"secondary"}
+              style={"mt-5 m:mt-0 px-8 py-3 text-base m:text-lg lg:text-xl"}
+            >
+              Contact Us
+            </Button>
+          </Link>
         </div>
         <button
           className={HamburgerButtonStyle}
