@@ -8,7 +8,7 @@ export default function EventId() {
   return (
     <div>
       <Header />
-      <section className="max-w-[930px] mx-auto py-20">
+      <section className="max-w-[930px] w-[95%] mx-auto py-20">
         <div className="bg-gradient-to-br from-[#146BDF] from-36.2% to-[#002F6D] grid justify-end [&>*]:text-right p-10 space-y-2 text-white">
           <Heading level={"h2"} variant={"m"}>
             CYBER HACKATHON
@@ -20,7 +20,7 @@ export default function EventId() {
             Cyberroot Building Old Take Away, Adebayo, Ado-Ekiti.
           </Heading>
         </div>
-        <div className="p-32 bg-ghostWhite">
+        <div className="p-10 s:p-20 m:p-32 bg-ghostWhite">
           <form className="space-y-5">
             <div className="space-y-1">
               <label htmlFor="first name" className="block text-brightNavyBlue">

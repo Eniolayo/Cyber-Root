@@ -36,7 +36,7 @@ export default function Header() {
 
               <ul
                 className={`m:absolute top-full w-[270px] -left-[180%] px-3 py-3 text-white bg-brightNavyBlue ${
-                  isService ? "max-h-[400px]" : "!py-0 max-h-0"
+                  isService ? "max-h-[600px]" : "!py-0 max-h-0"
                 } 
                 transition-all ease-in origin-top overflow-hidden `}
               >
@@ -80,7 +80,7 @@ export default function Header() {
           </ul>
           <Link
             href={"/contact-us"}
-            className="mt-5 m:mt-0 px-8 py-3 text-base m:text-lg lg:text-xl bg-brightNavyBlue text-white rounded-m"
+            className="mt-5 m:mt-0 px-8 py-3 text-base m:text-lg lg:text-xl block w-fit bg-brightNavyBlue text-white rounded-m"
           >
             Contact Us
           </Link>
