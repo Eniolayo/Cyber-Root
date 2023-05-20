@@ -27,6 +27,7 @@ module.exports = {
         darkSilver: "#717171",
         spanishGray: "#9E9E9E",
         azureishWhite: "#D9E8FD",
+        ghostWhite: "#F8F9FB",
         ateneoBlue: "#0A3670",
         oxfordBlue: "#07244A",
         maastrichtBlue: "#04152D",

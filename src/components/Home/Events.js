@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button, Heading, Text } from "../ui";
 
 export default function Events() {
@@ -39,9 +40,12 @@ function EventsCard() {
         perceived as easy targets. A cybersecurity event designed for small
         business owners and employees can cover topics like risk management,
       </p>
-      <button className="border border-white text-sm rounded-lg px-2 py-1">
+      <Link
+        href="/events/929453638615793"
+        className="border border-white text-sm rounded-lg px-2 py-1"
+      >
         Register for free
-      </button>
+      </Link>
     </div>
   );
 }

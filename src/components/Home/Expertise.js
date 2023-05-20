@@ -19,9 +19,6 @@ export default function Expertise() {
           gathering, managed cyber security services, strategic IT consulting,
           cyber.
         </Text>
-        <Button variant={"secondary"} style="px-10 py-3">
-          Learn More
-        </Button>
       </div>
       <div className="flex-1">
         <div className="relative w-[300px] s:w-[414px] before:block before:absolute before:bg-brightNavyBlue -translate-x-7 before:translate-x-7 before:translate-y-7 before:rounded-bl-large before:h-full before:w-full h-[232px] s:h-[322px] ml-auto">

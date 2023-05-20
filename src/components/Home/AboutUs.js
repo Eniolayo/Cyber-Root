@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button, Text } from "../ui";
 import Heading from "../ui/Heading";
 import ctl from "@netlify/classnames-template-literals";
+import Link from "next/link";
 
 export default function AboutUs() {
   return (
@@ -27,9 +28,12 @@ export default function AboutUs() {
           ultimately solve cyber security problems across their entire
           enterprise and product portfolios.
         </Text>
-        <Button variant={"secondary"} style="px-10 py-3">
+        <Link
+          href="/about-us"
+          className="bg-brightNavyBlue text-white rounded-m px-10 py-3"
+        >
           Discover More
-        </Button>
+        </Link>
       </div>
     </section>
   );

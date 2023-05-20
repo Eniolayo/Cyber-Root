@@ -52,7 +52,7 @@ export default function Footer() {
         >
           follow us on
         </Heading>
-        <ul className="flex">
+        <ul className="flex gap-1">
           {[
             "ic:sharp-facebook",
             "mdi:twitter",

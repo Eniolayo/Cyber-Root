@@ -35,7 +35,7 @@ export default function Header() {
               </div>
 
               <ul
-                className={`m:absolute top-full w-[270px] -left-[200%] px-3 py-3 text-white bg-brightNavyBlue ${
+                className={`m:absolute top-full w-[270px] -left-[180%] px-3 py-3 text-white bg-brightNavyBlue ${
                   isService ? "max-h-[400px]" : "!py-0 max-h-0"
                 } 
                 transition-all ease-in origin-top overflow-hidden `}
@@ -78,13 +78,11 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <Link href={"/contact-us"}>
-            <Button
-              variant={"secondary"}
-              style={"mt-5 m:mt-0 px-8 py-3 text-base m:text-lg lg:text-xl"}
-            >
-              Contact Us
-            </Button>
+          <Link
+            href={"/contact-us"}
+            className="mt-5 m:mt-0 px-8 py-3 text-base m:text-lg lg:text-xl bg-brightNavyBlue text-white rounded-m"
+          >
+            Contact Us
           </Link>
         </div>
         <button
