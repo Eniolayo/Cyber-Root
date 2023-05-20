@@ -22,6 +22,7 @@ module.exports = {
         gray: "#7B7B7B",
         brightGray: "#EDEDED",
         philippineGray: "#8D8D8D",
+        chineseSilver: "#C9C9C9",
         lightSilver: "#D9D9D9",
         darkSilver: "#717171",
         spanishGray: "#9E9E9E",

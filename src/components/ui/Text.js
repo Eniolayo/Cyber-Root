@@ -34,17 +34,18 @@ function TextStyle(variant, styles) {
             m:text-sm 
             ${styles}
         `);
+
+    case "md":
+      return ctl(`
+            text-base 
+            md:text-lg 
+            ${styles}
+        `);
     case "m":
       return ctl(`
             text-base 
             m:text-lg 
             lg:text-xl 
-            ${styles}
-        `);
-    case "md":
-      return ctl(`
-            text-base 
-            md:text-lg 
             ${styles}
         `);
     case "lg":
