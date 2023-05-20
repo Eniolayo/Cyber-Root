@@ -3,9 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import ctl from "@netlify/classnames-template-literals";
 import { Button } from "./ui";
+import { Icon } from "@iconify/react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isService, setIsService] = React.useState(false);
   return (
     <header className={HeaderStyle}>
       <div className={HeaderWrapperStyle}>
@@ -17,10 +19,57 @@ export default function Header() {
             height={49}
           />
         </Link>
-        {/* TODO:Review arrangement */}
         <div className={HeaderLinkStyle(isOpen)}>
           <ul className={HeaderWrapperLinkStyle}>
-            {["Services", "Events", "blog", "training"].map((item) => (
+            <li
+              className="relative text-base m:text-lg lg:text-xl text-white m:text-black capitalize"
+              onMouseEnter={() => setIsService(true)}
+              onMouseLeave={() => setIsService(false)}
+            >
+              <div
+                className="flex items-center gap-2 cursor-pointer"
+                onClick={() => setIsService((prev) => !prev)}
+              >
+                <span>Services</span>
+                <Icon icon="icon-park:down" />
+              </div>
+
+              <ul
+                className={`m:absolute top-full w-[270px] -left-[200%] px-3 py-3 text-white bg-brightNavyBlue ${
+                  isService ? "max-h-[400px]" : "py-0 max-h-0 "
+                } 
+                transition-all ease-in origin-top overflow-hidden `}
+              >
+                {[
+                  {
+                    name: "Ethical Hacking Training",
+                    url: "ethical-hacking-training",
+                  },
+                  {
+                    name: "Penetration Testing",
+                    url: "penetration-testing",
+                  },
+                  {
+                    name: "Threat Assessment",
+                    url: "threat-assessment",
+                  },
+                  {
+                    name: "Vulnerability Assessment",
+                    url: "vulnerability-assessment",
+                  },
+                ].map((item) => (
+                  <li
+                    key={item.name}
+                    className="border-b border-white py-1 text-base"
+                  >
+                    <Link href={"/services/" + item.url} className="block">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+            {["Events", "blog", "training"].map((item) => (
               <li
                 className="text-base m:text-lg lg:text-xl text-white m:text-black capitalize"
                 key={item}

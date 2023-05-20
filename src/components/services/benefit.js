@@ -12,7 +12,7 @@ export default function Benefit({ services = [] }) {
           How will this improve your cybersecurity posture ?
         </Text>
       </div>
-      <div className="grid grid-cols-[repeat(auto-fit,_minmax(260px,_1fr))] content-center w-[90%] m:w-[60%] mx-auto gap-5">
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(260px,_1fr))] content-center w-[90%] m:w-[60%] mx-auto gap-5 max-w-[1500px]">
         {services.map((item) => (
           <div
             key={item}

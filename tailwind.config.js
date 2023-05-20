@@ -69,6 +69,15 @@ module.exports = {
       backgroundImage: {
         "summit-bg": "url('/summit-bg.png')",
       },
+      keyframes: {
+        wiggle: {
+          "0%": { height: "0" },
+          "100%": { height: "100%" },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 5s ease-in-out infinite",
+      },
     },
     borderRadius: {
       none: "0",
