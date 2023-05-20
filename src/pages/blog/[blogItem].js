@@ -29,10 +29,10 @@ export default function BlogItem({ postRes, relatedPosts }) {
         title={postRes.fields.title}
         date={postRes.fields.dateAndTime.slice(0, 10)}
         authorName={postRes.fields.authorsName}
+        authorImage={postRes?.fields?.authorImage?.fields?.file?.url?.slice(2)}
       />
       <BlogImage item={postRes.fields.blogImage} />
       <BlogContent content={postRes.fields.mainContent} />
-      <BlogTags />
       <BlogRecommendation posts={relatedPosts} />
       <Footer />
     </main>

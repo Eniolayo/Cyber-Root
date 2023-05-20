@@ -36,7 +36,7 @@ export default function Header() {
 
               <ul
                 className={`m:absolute top-full w-[270px] -left-[200%] px-3 py-3 text-white bg-brightNavyBlue ${
-                  isService ? "max-h-[400px]" : "py-0 max-h-0 "
+                  isService ? "max-h-[400px]" : "!py-0 max-h-0"
                 } 
                 transition-all ease-in origin-top overflow-hidden `}
               >

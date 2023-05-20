@@ -27,8 +27,15 @@ export default function BlogItemHeader({
       </Heading>
       <div className="flex flex-col m:flex-row justify-between gap-5 m:items-center">
         <div className="flex gap-3 items-center">
-          <div className="relative w-[98px] h-[98px] bg-gray rounded-full">
-            {/* <Image src="" alt="" fill/> */}
+          <div className="relative w-[98px] h-[98px] bg-gray overflow-hidden rounded-full">
+            {authorImage ? (
+              <Image
+                src={"http://" + authorImage}
+                alt={authorName}
+                fill
+                className="object-cover"
+              />
+            ) : null}
           </div>
           <div className="space-y-1">
             <Heading level={"h5"} styles={"text-brightNavyBlue"}>
