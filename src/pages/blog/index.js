@@ -16,7 +16,7 @@ export default function Blog({ posts }) {
   return (
     <main>
       <Header />
-      <BlogHeader posts={posts[posts.length - 1]} />
+      <BlogHeader posts={posts[0]} />
       <ExpertAdvice />
       <BlogCardSection posts={posts} />
       <Footer />
