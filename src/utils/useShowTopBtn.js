@@ -1,13 +1,25 @@
 import React from "react";
 
 export default function UseShowTopBtn() {
-  const [showTopBtn, setShowTopBtn] = React.useState(false);
-  React.useEffect(() => {
-    window.addEventListener("scroll", () => {
-      window.scrollY > 400 ? setShowTopBtn(true) : setShowTopBtn(false);
-      return;
-    });
-  });
-  return [showTopBtn, setShowTopBtn];
-}
+  const [isVisible, setIsVisible] = React.useState(false);
 
+  const handleScroll = () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    setIsVisible(scrollTop > 300);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  return [isVisible, scrollToTop];
+}

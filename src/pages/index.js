@@ -25,27 +25,8 @@ const client = contentful.createClient({
 });
 
 export default function Home({ posts, eventPosts }) {
-  const [showTopBtn, setShowTopBtn] = UseShowTopBtn();
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, scrollToTop] = UseShowTopBtn();
 
-  const handleScroll = () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    setIsVisible(scrollTop > 300);
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <>
       <Head>
