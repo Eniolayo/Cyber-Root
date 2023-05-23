@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ctl from "@netlify/classnames-template-literals";
-import { Button } from "./ui";
 import { Icon } from "@iconify/react";
 
 export default function Header() {
@@ -69,12 +68,16 @@ export default function Header() {
                 ))}
               </ul>
             </li>
-            {["Events", "blog", "training"].map((item) => (
+            {[
+              { name: "Events", url: "https://cyberrootsummit.vercel.app/" },
+              { name: "blog", url: "/blog" },
+              { name: "training", url: "/training" },
+            ].map((item) => (
               <li
                 className="text-base m:text-lg lg:text-xl text-white m:text-black capitalize"
-                key={item}
+                key={item.name}
               >
-                <Link href={"/" + item}>{item}</Link>
+                <Link href={item.url}>{item.name}</Link>
               </li>
             ))}
           </ul>

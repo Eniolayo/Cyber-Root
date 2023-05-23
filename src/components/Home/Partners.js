@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Heading } from "../ui";
+import Link from "next/link";
 
 export default function Partners() {
   return (
@@ -10,7 +11,10 @@ export default function Partners() {
       </Heading>
       <div className="flex flex-wrap justify-center md:justify-between w-[80%] max-w-[700px] mx-auto items-center gap-5">
         <div className="bg-white p-3 rounded-m">
-          <div className="w-[280px] h-[85px] relative">
+          <Link
+            href="https://www.comptia.org/"
+            className="w-[280px] h-[85px] relative block"
+          >
             <Image
               src="/comptia_logo.png"
               alt="comptia logo"
@@ -19,10 +23,13 @@ export default function Partners() {
               }}
               fill
             />
-          </div>
+          </Link>
         </div>
         <div className="bg-white p-3 rounded-m">
-          <div className="w-[200px] relative h-[70px]">
+          <Link
+            href="https://pecb.com/"
+            className="w-[200px] relative h-[70px] block"
+          >
             <Image
               priority
               src="/pecb-logo.svg"
@@ -32,7 +39,7 @@ export default function Partners() {
               }}
               alt="pecb-logo"
             />
-          </div>
+          </Link>
         </div>
       </div>
     </div>

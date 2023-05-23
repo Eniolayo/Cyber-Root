@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ServicesItems } from "@/constants/servicesItems";
 import { Button, Heading, Text } from "../ui";
 import ctl from "@netlify/classnames-template-literals";
+import Link from "next/link";
 
 export default function Services() {
   const [shownServices] = React.useState(ServicesItems);
@@ -53,13 +54,16 @@ export default function Services() {
               </Heading>
               <Text>{itemPreviewed.desc}</Text>
             </div>
-
-            <Button
-              variant={"secondary"}
-              style={"text-xl px-10 py-3 capitalize"}
-            >
-              learn more
-            </Button>
+            {itemPreviewed.url && (
+              <Link
+                href={itemPreviewed.url}
+                className={
+                  "block text-xl w-fit px-10 py-3 capitalize bg-brightNavyBlue text-white rounded-m "
+                }
+              >
+                learn more
+              </Link>
+            )}
           </div>
         </div>
       </div>

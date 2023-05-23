@@ -3,11 +3,13 @@ export const ServicesItems = [
     name: "Penetration Testing",
     desc: "Our company provides professional penetration testing services to guarantee security and get protection against potential cyber attacks.",
     image: "/pen-testing.png",
+    url: "/services/penetration-testing",
   },
   {
     name: "Vulnerability Assessment",
     desc: "We offer comprehensive vulnerability assessment services to help identify potential weaknesses in your organization's IT infrastructure.",
     image: "/vuneralibilty-assessement.png",
+    url: "/services/vulnerability-assessment",
   },
   {
     name: "Web Development Training",
@@ -18,6 +20,7 @@ export const ServicesItems = [
     name: "Ethical Hacking Training",
     desc: "We offer professional ethical hacking training programs to assist professionals in developing the skills needed to detect and resolve possible cybersecurity risks and vulnerabilities.",
     image: "/hacking-icon-5 1.png",
+    url: "/services/ethical-hacking-training",
   },
   {
     name: "Cyber Security awareness training",
@@ -28,5 +31,6 @@ export const ServicesItems = [
     name: "Cyber Security Consultancy",
     desc: "Our company offers expert cyber security consultancy services to help organizations assess, plan, and implement robust security strategies to protect against cyber threats.",
     image: "/cyber-security-consult.png",
+    url: "/contact-us",
   },
 ];

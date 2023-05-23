@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ctl from "@netlify/classnames-template-literals";
 import { Button } from "../ui";
+import Link from "next/link";
 
 export default function IntroContent() {
   return (
@@ -15,18 +16,14 @@ export default function IntroContent() {
           cybersecurity solutions.{" "}
         </p>
         <div className="flex flex-col md:flex-row gap-3 md:gap-10 justify-center m:justify-start">
-          <Button
-            variant={"primary"}
-            style={"px-3 m:px-4 py-2 m:py-3 text-base m:text-lg lg:text-xl"}
+          <Link
+            href="/contact-us"
+            className={
+              "text-brightNavyBlue block rounded-m border border-brightNavyBlue px-3 m:px-4 py-2 m:py-3 text-base m:text-lg lg:text-xl"
+            }
           >
             Get Expert Advice
-          </Button>
-          <Button
-            variant={"secondary"}
-            style={"px-10 py-3 text-base m:text-lg lg:text-xl"}
-          >
-            Contact Us
-          </Button>
+          </Link>
         </div>
       </div>
       <div className="relative w-[490px] h-[492px] hidden m:block">

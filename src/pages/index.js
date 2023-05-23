@@ -23,7 +23,7 @@ const client = contentful.createClient({
   accessToken: process.env.NEXT_PUBLIC_ACCESSTOKEN,
 });
 
-export default function Home({ posts }) {
+export default function Home({ posts, eventPosts }) {
   const [showTopBtn, setShowTopBtn] = UseShowTopBtn();
 
   return (
@@ -44,7 +44,7 @@ export default function Home({ posts }) {
         <Services />
         <Partners />
         <Blog posts={posts} />
-        <Events />
+        <Events eventPosts={eventPosts} />
         <Newsletter />
         <Footer />
       </main>
@@ -55,8 +55,12 @@ export async function getStaticProps() {
   const res = await client.getEntries({
     content_type: "blogPost",
   });
+  const eventRes = await client.getEntries({
+    content_type: "summit",
+  });
   const posts = await res.items;
+  const eventPosts = await eventRes.items;
   return {
-    props: { posts },
+    props: { posts, eventPosts },
   };
 }

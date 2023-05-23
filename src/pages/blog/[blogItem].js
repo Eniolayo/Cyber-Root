@@ -38,6 +38,7 @@ export default function BlogItem({ postRes, relatedPosts }) {
     </main>
   );
 }
+
 export async function getStaticPaths() {
   const res = await client.getEntries({
     content_type: "blogPost",
@@ -55,6 +56,7 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
 export async function getStaticProps({ params }) {
   const currentUrl = params.blogItem;
 

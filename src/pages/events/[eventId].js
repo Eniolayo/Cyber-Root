@@ -14,7 +14,7 @@ export default function EventId() {
             CYBER HACKATHON
           </Heading>
           <Text styles={"capitalize"} variant={"sm"}>
-            june 12th -15th 2023
+            june 12th - 15th 2023
           </Text>
           <Heading level={"h4"}>
             Cyberroot Building Old Take Away, Adebayo, Ado-Ekiti.
