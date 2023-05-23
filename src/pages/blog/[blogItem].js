@@ -2,15 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { Icon } from "@iconify/react";
 import {
   BlogContent,
   BlogImage,
   BlogItemHeader,
   BlogRecommendation,
-  BlogTags,
 } from "@/components/Blog";
-import { useRouter } from "next/router";
+import Head from "next/head";
 const contentful = require("contentful");
 
 const client = contentful.createClient({
@@ -20,9 +18,16 @@ const client = contentful.createClient({
 });
 
 export default function BlogItem({ postRes, relatedPosts }) {
-  console.log(postRes);
+  // console.log(postRes);
   return (
     <main>
+      <Head>
+        <title>Cyberroot || {postRes.fields.title}</title>
+        <meta
+          name="description"
+          content={`CyberRoot International Ltd is a cyber security consulting and IT firms in Nigeria specializes in Information and intelligence gathering, managed cyber security services, strategic IT consulting, cyber. ${postRes.fields.mainContent}`}
+        />
+      </Head>
       <Header />
       <BlogItemHeader
         category={postRes.fields.category}

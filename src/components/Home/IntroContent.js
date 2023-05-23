@@ -15,16 +15,14 @@ export default function IntroContent() {
           Protect your digital assets from cyber criminals with our cutting-edge
           cybersecurity solutions.{" "}
         </p>
-        <div className="flex flex-col md:flex-row gap-3 md:gap-10 justify-center m:justify-start">
-          <Link
-            href="/contact-us"
-            className={
-              "text-brightNavyBlue block rounded-m border border-brightNavyBlue px-3 m:px-4 py-2 m:py-3 text-base m:text-lg lg:text-xl"
-            }
-          >
-            Get Expert Advice
-          </Link>
-        </div>
+        <Link
+          href="/contact-us"
+          className={
+            "text-brightNavyBlue block rounded-m border border-brightNavyBlue px-3 m:px-4 py-2 m:py-3 text-base m:text-lg lg:text-xl w-fit"
+          }
+        >
+          Get Expert Advice
+        </Link>
       </div>
       <div className="relative w-[490px] h-[492px] hidden m:block">
         <Image src="/intro-person-image.png" alt="cyberroot Icon" fill />
