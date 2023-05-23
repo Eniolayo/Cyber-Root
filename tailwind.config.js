@@ -69,6 +69,7 @@ module.exports = {
       },
       backgroundImage: {
         "summit-bg": "url('/summit-bg.png')",
+        "firstAdPicture-bg": "url('/firstAdPicture.png')",
       },
     },
     borderRadius: {
