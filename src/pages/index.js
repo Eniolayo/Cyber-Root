@@ -1,21 +1,22 @@
+import { Icon } from "@iconify/react";
+import ctl from "@netlify/classnames-template-literals";
 import React from "react";
-import Head from "next/head";
+
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import {
-  IntroContent,
   AboutUs,
   Ads,
-  Expertise,
-  Objectives,
-  Services,
-  Partners,
   Blog,
-  Newsletter,
   Events,
+  Expertise,
+  IntroContent,
+  Newsletter,
+  Objectives,
+  Partners,
+  Services,
 } from "@/components/Home";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import UseShowTopBtn from "@/utils/useShowTopBtn";
-import { Icon } from "@iconify/react";
 const contentful = require("contentful");
 
 const client = contentful.createClient({
@@ -29,14 +30,6 @@ export default function Home({ posts, eventPosts }) {
 
   return (
     <>
-      <Head>
-        <title>Cyberroot || Cyber Security consulting and IT firm</title>
-        <meta
-          name="description"
-          content="CyberRoot International Ltd is a cyber security consulting and IT firms in Nigeria specializes in Information and intelligence gathering, managed cyber security services, strategic IT consulting, cyber."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
       <main>
         <Header />
         <IntroContent />
@@ -50,12 +43,7 @@ export default function Home({ posts, eventPosts }) {
         <Events eventPosts={eventPosts} />
         <Newsletter />
         <Footer />
-        <button
-          className={`fixed bottom-6 right-6 p-1 bg-gray-800 bg-white rounded-full ${
-            isVisible ? "opacity-100" : "opacity-0"
-          } transition-opacity duration-500 group border border-brightNavyBlue`}
-          onClick={scrollToTop}
-        >
+        <button className={ScrollToTopStyles(isVisible)} onClick={scrollToTop}>
           <Icon
             icon="icon-park:up"
             fontSize={"40px"}
@@ -78,4 +66,21 @@ export async function getStaticProps() {
   return {
     props: { posts, eventPosts },
   };
+}
+function ScrollToTopStyles(isVisible) {
+  return ctl(`
+    fixed 
+    bottom-6 
+    right-6 
+    p-1 
+    bg-gray-800 
+    bg-white 
+    rounded-full 
+    ${isVisible ? "opacity-100" : "opacity-0"} 
+    transition-opacity 
+    duration-500 
+    group 
+    border 
+    border-brightNavyBlue
+  `);
 }

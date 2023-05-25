@@ -1,4 +1,5 @@
 import ctl from "@netlify/classnames-template-literals";
+
 import BlogCard from "../blogcard";
 import BlogCardSkeleton from "../blogcardskeleton";
 

@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import { Heading, Text } from "@/components/ui";
+
+import { Footer, Header } from "@/components";
 import { Benefit } from "@/components/services";
+import { Heading, Text } from "@/components/ui";
 
 export default function ThreatAssessment() {
   return (

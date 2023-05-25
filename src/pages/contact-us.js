@@ -1,8 +1,9 @@
-import Header from "@/components/header";
-import { Heading, Text } from "@/components/ui";
 import { Icon } from "@iconify/react";
 import ctl from "@netlify/classnames-template-literals";
 import React from "react";
+
+import { Header } from "@/components";
+import { Heading, Text } from "@/components/ui";
 
 export default function ContactUs() {
   return (
@@ -28,51 +29,6 @@ export default function ContactUs() {
     </div>
   );
 }
-const inputLabelStyle = ctl(`
-   absolute 
-   text-lg 
-   top-3 
-   group-focus-within:text-base 
-   peer-valid:text-base 
-   peer-valid:-top-3 
-   peer-valid:text-philippineGray 
-   group-focus-within:text-philippineGray 
-   group-focus-within:-top-3 
-   transition-all 
-   left-0 
-   pointer-events-none
-`);
-const inputStyle = ctl(`
-    w-full 
-    block 
-    pt-4 
-    pb-3 
-    group/item 
-    outline-none 
-    border-b 
-    text-lg
-    group-focus-within:border-brightNavyBlue 
-    focus-visible:outline-0 
-    peer
-`);
-const inputWrapperStyle = ctl(`
-    relative 
-    group 
-    border-philippineGray 
-    flex-1
-`);
-const inputRadioStyle = ctl(`
-    w-[18px] 
-    h-[18px] 
-    accent-brightNavyBlue
-`);
-const radioLabelStyle = ctl(`
-    text-lg 
-    flex 
-    justify-center 
-    items-center 
-    gap-1
-`);
 
 function ContactUsForm() {
   return (
@@ -188,7 +144,48 @@ function ContactInformation() {
     </div>
   );
 }
-/* 
-linear-gradient(60.37deg, #146BDF 36.2%, #002F6D 102.41%);
-bg-gradient-to-br from-[#146BDF] from-36.2% to-[#002F6D] to-102.41% 
-*/
+const inputLabelStyle = ctl(`
+   absolute 
+   text-lg 
+   top-3 
+   group-focus-within:text-base 
+   peer-valid:text-base 
+   peer-valid:-top-3 
+   peer-valid:text-philippineGray 
+   group-focus-within:text-philippineGray 
+   group-focus-within:-top-3 
+   transition-all 
+   left-0 
+   pointer-events-none
+`);
+const inputStyle = ctl(`
+    w-full 
+    block 
+    pt-4 
+    pb-3 
+    group/item 
+    outline-none 
+    border-b 
+    text-lg
+    group-focus-within:border-brightNavyBlue 
+    focus-visible:outline-0 
+    peer
+`);
+const inputWrapperStyle = ctl(`
+    relative 
+    group 
+    border-philippineGray 
+    flex-1
+`);
+const inputRadioStyle = ctl(`
+    w-[18px] 
+    h-[18px] 
+    accent-brightNavyBlue
+`);
+const radioLabelStyle = ctl(`
+    text-lg 
+    flex 
+    justify-center 
+    items-center 
+    gap-1
+`);

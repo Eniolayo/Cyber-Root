@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Heading, Text } from "../ui";
 import Link from "next/link";
+
+import { Heading, Text } from "../ui";
 
 export default function BlogHeader(posts) {
   return (

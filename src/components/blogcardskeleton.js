@@ -1,7 +1,6 @@
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-import { Heading, Text } from "./ui";
+import Skeleton from "react-loading-skeleton";
 
 export default function BlogCardSkeleton() {
   return (

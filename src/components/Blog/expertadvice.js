@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { Button, Heading } from "../ui";
 
 export default function ExpertAdvice() {

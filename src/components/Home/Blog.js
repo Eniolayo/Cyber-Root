@@ -1,7 +1,6 @@
-import Image from "next/image";
 import BlogCard from "../blogcard";
-import { Heading, Text } from "../ui";
 import BlogCardSkeleton from "../blogcardskeleton";
+import { Heading, Text } from "../ui";
 
 export default function Blog({ posts = [] }) {
   return (

@@ -1,8 +1,9 @@
+import ctl from "@netlify/classnames-template-literals";
 import Image from "next/image";
+import Link from "next/link";
+
 import { Button, Text } from "../ui";
 import Heading from "../ui/Heading";
-import ctl from "@netlify/classnames-template-literals";
-import Link from "next/link";
 
 export default function AboutUs() {
   return (

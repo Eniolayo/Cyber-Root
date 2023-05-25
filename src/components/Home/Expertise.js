@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Button, Text } from "../ui";
+
+import { Text } from "../ui";
 import Heading from "../ui/Heading";
 
 export default function Expertise() {

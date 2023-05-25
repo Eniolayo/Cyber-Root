@@ -1,8 +1,10 @@
-import { ObjectivesItems } from "@/constants";
 import { Icon } from "@iconify/react";
 import ctl from "@netlify/classnames-template-literals";
-import Heading from "../ui/Heading";
+
+import { ObjectivesItems } from "@/constants";
+
 import { Text } from "../ui";
+import Heading from "../ui/Heading";
 
 export default function Objectives() {
   return (

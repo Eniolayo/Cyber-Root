@@ -1,6 +1,6 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import { Controls, Player } from "@lottiefiles/react-lottie-player";
+import { Player } from "@lottiefiles/react-lottie-player";
+
+import { Footer, Header } from "@/components";
 
 export default function Custom404() {
   return (

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Button, Heading, Text } from "../ui";
+
+import { Heading, Text } from "../ui";
 
 export default function Events({ eventPosts }) {
   console.log(eventPosts, "eventPosts");

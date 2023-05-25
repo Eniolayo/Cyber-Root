@@ -1,7 +1,8 @@
-import React from "react";
 import Image from "next/image";
-import { Heading } from "../ui";
 import Link from "next/link";
+import React from "react";
+
+import { Heading } from "../ui";
 
 export default function Partners() {
   return (

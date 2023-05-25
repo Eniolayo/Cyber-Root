@@ -1,14 +1,23 @@
-import React from "react";
+import { Icon } from "@iconify/react";
+import ctl from "@netlify/classnames-template-literals";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import ctl from "@netlify/classnames-template-literals";
-import { Icon } from "@iconify/react";
+import React from "react";
 
-export default function Header() {
+export default function Header({
+  title = "Cyberroot || Cyber Security consulting and IT firm",
+  description = "CyberRoot International Ltd is a cyber security consulting and IT firms in Nigeria specializes in Information and intelligence gathering, managed cyber security services, strategic IT consulting, cyber.",
+}) {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isService, setIsService] = React.useState(false);
   return (
     <header className={HeaderStyle}>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <div className={HeaderWrapperStyle}>
         <Link href="/">
           <Image

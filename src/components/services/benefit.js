@@ -4,7 +4,7 @@ import { Heading, Text } from "../ui";
 export default function Benefit({ services = [] }) {
   return (
     <section className="bg-maastrichtBlue py-12 text-white space-y-8">
-      <div className="text-center mx-auto">
+      <div className="text-center w-[90%] mx-auto">
         <Heading level={"h4"} variant={"md"} styles={"font-black"}>
           benefits
         </Heading>

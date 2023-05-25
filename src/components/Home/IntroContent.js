@@ -1,6 +1,5 @@
-import Image from "next/image";
 import ctl from "@netlify/classnames-template-literals";
-import { Button } from "../ui";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function IntroContent() {

@@ -1,4 +1,5 @@
 import ctl from "@netlify/classnames-template-literals";
+
 import { Button, Heading, Text } from "../ui";
 
 export default function Newsletter() {

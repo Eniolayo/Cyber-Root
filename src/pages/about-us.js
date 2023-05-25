@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+
+import { Footer, Header } from "@/components";
 import { Heading, Text } from "@/components/ui";
 
 function AboutUs() {

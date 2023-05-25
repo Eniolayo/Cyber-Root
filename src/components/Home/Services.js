@@ -1,9 +1,11 @@
-import React from "react";
-import Image from "next/image";
-import { ServicesItems } from "@/constants/servicesItems";
-import { Button, Heading, Text } from "../ui";
 import ctl from "@netlify/classnames-template-literals";
+import Image from "next/image";
 import Link from "next/link";
+import React from "react";
+
+import { ServicesItems } from "@/constants/servicesItems";
+
+import { Heading, Text } from "../ui";
 
 export default function Services() {
   const [shownServices] = React.useState(ServicesItems);

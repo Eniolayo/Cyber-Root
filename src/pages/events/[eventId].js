@@ -1,13 +1,13 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import { Button, Heading, Text } from "@/components/ui";
 import ctl from "@netlify/classnames-template-literals";
 import React from "react";
+
+import { Footer, Header } from "@/components";
+import { Button, Heading, Text } from "@/components/ui";
 
 export default function EventId() {
   return (
     <div>
-      <Header />
+      <Header title={`Cyberroot || Event - ${"CYBER HACKATHON"}`} />
       <section className="max-w-[930px] w-[95%] mx-auto py-20">
         <div className="bg-gradient-to-br from-[#146BDF] from-36.2% to-[#002F6D] grid justify-end [&>*]:text-right p-10 space-y-2 text-white">
           <Heading level={"h2"} variant={"m"}>

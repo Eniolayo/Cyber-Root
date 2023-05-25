@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+
+import { Footer, Header } from "@/components";
 import { BlogCardSection, BlogHeader, ExpertAdvice } from "@/components/Blog";
 const contentful = require("contentful");
 
@@ -14,7 +14,7 @@ export default function Blog({ posts }) {
   console.log(posts);
   return (
     <main>
-      <Header />
+      <Header title={`Cyberroot || Blog`} />
       <BlogHeader posts={posts[0]} />
       <ExpertAdvice />
       <BlogCardSection posts={posts} />
