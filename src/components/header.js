@@ -17,6 +17,61 @@ export default function Header({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta
+          property="og:title"
+          content="Cyberroot || Cyber Security consulting and IT firm"
+        />
+        <meta property="og:locale" content="en_US" />
+        <meta
+          property="og:site_name"
+          content="Cyberroot || Cyber Security consulting and IT firm"
+        />
+        <meta property="og:url" content="https://cyberrootltd.com" />
+        <meta
+          property="og:description"
+          content="CyberRoot is a leading cybersecurity company dedicated to providing
+          advanced solutions and comprehensive protection for businesses and
+          organizations. With our team of highly skilled experts and
+          cutting-edge technologies, we offer a wide range of services to
+          safeguard valuable data, secure networks, and defend against cyber
+          threats. We prioritize proactive defense strategies, leveraging threat
+          intelligence and continuous monitoring to identify vulnerabilities and
+          mitigate risks before they can be exploited."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/duakn882p/image/upload/v1685193749/favicon_pfphf0.ico"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta property="og:type" content="article" />
+        <meta property="article:section" content="Cyber security services" />
+
+        <meta
+          property="twitter:card"
+          content="CyberRoot is a leading cybersecurity company dedicated to providing
+          advanced solutions and comprehensive protection for businesses and
+          organizations."
+        />
+        <meta
+          property="twitter:title"
+          content="Cyberroot || Cyber Security consulting and IT firm"
+        />
+        <meta
+          property="twitter:description"
+          content="CyberRoot is a leading cybersecurity company dedicated to providing
+          advanced solutions and comprehensive protection for businesses and
+          organizations. With our team of highly skilled experts and
+          cutting-edge technologies, we offer a wide range of services to
+          safeguard valuable data, secure networks, and defend against cyber
+          threats."
+        />
+        <meta
+          property="twitter:image"
+          content="https://res.cloudinary.com/duakn882p/image/upload/v1685193827/cyberrootIcon_1_ksnfya.png"
+        />
+        <meta property="twitter:url" content="https://cyberrootltd.com" />
       </Head>
       <div className={HeaderWrapperStyle}>
         <Link href="/">
