@@ -5,6 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import {
+  BLOG,
+  CONTACT_US,
+  CYBERROOTSUMMIT,
+  HOME,
+  SERVICES_PAGES,
+  TRAINING,
+} from "@/config/link";
+
 export default function Header({
   title = "Cyberroot || Cyber Security consulting and IT firm",
   description = "CyberRoot International Ltd is a cyber security consulting and IT firms in Nigeria specializes in Information and intelligence gathering, managed cyber security services, strategic IT consulting, cyber.",
@@ -74,7 +83,7 @@ export default function Header({
         <meta property="twitter:url" content="https://cyberrootltd.com" />
       </Head>
       <div className={HeaderWrapperStyle}>
-        <Link href="/">
+        <Link href={HOME}>
           <Image
             src="/CyberRoot Logo.png"
             alt="cyberroot Icon"
@@ -125,7 +134,7 @@ export default function Header({
                     key={item.name}
                     className="border-b border-white py-1 text-base"
                   >
-                    <Link href={"/services/" + item.url} className="block">
+                    <Link href={SERVICES_PAGES(item.url)} className="block">
                       {item.name}
                     </Link>
                   </li>
@@ -133,9 +142,9 @@ export default function Header({
               </ul>
             </li>
             {[
-              { name: "Events", url: "https://cyberrootsummit.vercel.app/" },
-              { name: "blog", url: "/blog" },
-              { name: "training", url: "/training" },
+              { name: "Events", url: CYBERROOTSUMMIT },
+              { name: "blog", url: BLOG },
+              { name: "training", url: TRAINING },
             ].map((item) => (
               <li
                 className="text-base m:text-lg lg:text-xl text-white m:text-black capitalize"
@@ -146,7 +155,7 @@ export default function Header({
             ))}
           </ul>
           <Link
-            href={"/contact-us"}
+            href={CONTACT_US}
             className="mt-5 m:mt-0 px-8 py-3 text-base m:text-lg lg:text-xl block w-fit bg-brightNavyBlue text-white rounded-m"
           >
             Contact Us

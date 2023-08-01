@@ -2,6 +2,8 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { HOME } from "@/config/link";
+
 import { Heading } from "../ui";
 
 export default function BlogItemHeader({
@@ -49,7 +51,7 @@ export default function BlogItemHeader({
           {["ic:sharp-facebook", "mdi:twitter", "ph:instagram-logo-fill"].map(
             (item) => (
               <li key={item}>
-                <Link href={"/"}>
+                <Link href={HOME}>
                   <Icon icon={item} color="#146BDF" fontSize={"44px"} />
                 </Link>
               </li>

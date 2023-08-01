@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { BLOG_PAGES } from "@/config/link";
+
 import { Heading, Text } from "./ui";
 
 export default function BlogCard({ item }) {
   return (
     <Link
-      href={"/blog/" + item.sys.id}
+      href={BLOG_PAGES(item.sys.id)}
       className="border border-spanishGray max-w-[360px] w-full mx-auto"
     >
       <div className="relative h-[200px] m:h-[250px]">

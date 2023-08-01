@@ -2,6 +2,15 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
 
+import {
+  ABOUT_US,
+  BLOG,
+  CYBERROOTSUMMIT,
+  HOME,
+  SERVICES,
+  SERVICES_PAGES,
+} from "@/config/link";
+
 import { Heading } from "./ui";
 
 export default function Footer() {
@@ -35,7 +44,7 @@ export default function Footer() {
         </Heading>
         <ul>
           <li className="underline mb-1 max-w-[210px]">
-            <Link href={"/"}>
+            <Link href={HOME}>
               Adamolekun Estate, Adebayo Old Takeaway, 360102, Ado Ekiti, Ekiti
             </Link>
           </li>
@@ -61,7 +70,7 @@ export default function Footer() {
             "ph:youtube-logo-fill",
           ].map((item) => (
             <li key={item}>
-              <Link href="/">
+              <Link href={HOME}>
                 <Icon icon={item} color="#146BDF" fontSize={"30px"} />
               </Link>
             </li>
@@ -84,7 +93,7 @@ export default function Footer() {
         <ul>
           {["Privacy Policy", "Terms and Conditions"].map((item) => (
             <li key={item}>
-              <Link href={"/"} className="underline mb-1">
+              <Link href={HOME} className="underline mb-1">
                 {item}
               </Link>
             </li>
@@ -106,7 +115,7 @@ export default function Footer() {
         <ul>
           {AboutUs.map((item) => (
             <li key={item.name}>
-              <Link className="underline mb-1" href={"/"}>
+              <Link className="underline mb-1" href={item.link}>
                 {item.name}
               </Link>
             </li>
@@ -127,11 +136,11 @@ export default function Footer() {
         </Heading>
         <ul>
           {[
-            { name: "Blog", link: "/" },
-            { name: "Events", link: "/" },
+            { name: "Blog", link: BLOG },
+            { name: "Events", link: CYBERROOTSUMMIT },
           ].map((item) => (
             <li key={item.name}>
-              <Link href={"/"} className="underline mb-1">
+              <Link href={item.link} className="underline mb-1">
                 {item.name}
               </Link>
             </li>
@@ -142,7 +151,7 @@ export default function Footer() {
   }
 }
 const AboutUs = [
-  { name: "Home", link: "/" },
-  { name: "About Us", link: "/" },
-  { name: "Services", link: "/" },
+  { name: "Home", link: HOME },
+  { name: "About Us", link: ABOUT_US },
+  { name: "Services", link: SERVICES },
 ];

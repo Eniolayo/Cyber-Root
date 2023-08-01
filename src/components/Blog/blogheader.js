@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { BLOG_PAGES } from "@/config/link";
+
 import { Heading, Text } from "../ui";
 
 export default function BlogHeader(posts) {
   return (
     <section className="flex flex-col m:flex-row mt-20 w-[92%] max-w-[1500px] mx-auto gap-10 items-center mb-5">
       <Link
-        href={"/blog/" + posts.posts.sys.id}
+        href={BLOG_PAGES(posts.posts.sys.id)}
         className="relative h-[310px] m:h-[450px] w-full m:w-[58%]"
       >
         <Image
@@ -20,7 +22,7 @@ export default function BlogHeader(posts) {
         />
       </Link>
       <Link
-        href={"/blog/" + posts.posts.sys.id}
+        href={BLOG_PAGES(posts.posts.sys.id)}
         className="flex-1 space-y-2 m:space-y-6"
       >
         <Heading

@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { EVENT_PAGES } from "@/config/link";
+
 import { Heading, Text } from "../ui";
 
 export default function Events({ eventPosts }) {
@@ -47,7 +49,7 @@ function EventsCard({ title, date, desc, id }) {
         {desc.length > 210 ? `${desc.slice(0, 210)}...` : desc}
       </p>
       <Link
-        href={`/events/${id}`}
+        href={EVENT_PAGES(id)}
         className="border border-white text-sm rounded-lg px-2 py-1"
       >
         Register for free
