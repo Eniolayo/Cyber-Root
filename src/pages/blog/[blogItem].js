@@ -66,5 +66,6 @@ export async function getStaticProps({ params }) {
   const relatedPosts = await tagRes.items;
   return {
     props: { relatedPosts, postRes },
+    revalidate: 10,
   };
 }
