@@ -26,7 +26,7 @@ export default function Footer() {
         />
         <AboutUsSection />
         <NewsAndEvents />
-        <ContactAndLegal />
+        {/* <ContactAndLegal /> */}
         <CyberrootOffice />
         <FollowLinks />
       </div>
@@ -64,14 +64,26 @@ export default function Footer() {
         </Heading>
         <ul className="flex gap-1">
           {[
-            "ic:sharp-facebook",
-            "mdi:twitter",
-            "ph:instagram-logo-fill",
-            "ph:youtube-logo-fill",
+            {
+              icon: "ic:sharp-facebook",
+              link: "https://web.facebook.com/CyberrootNg/?_rdc=1&_rdr",
+            },
+            {
+              icon: "ph:instagram-logo-fill",
+              link: "https://www.instagram.com/cyberrootltd/?hl=en",
+            },
+            {
+              icon: "mdi:twitter",
+              link: "https://twitter.com/cyberrootltd?lang=en",
+            },
+            {
+              icon: "ph:youtube-logo-fill",
+              link: "https://www.youtube.com/@cyberrootltd",
+            },
           ].map((item) => (
             <li key={item}>
               <Link href={HOME}>
-                <Icon icon={item} color="#146BDF" fontSize={"30px"} />
+                <Icon icon={item.icon} color="#146BDF" fontSize={"30px"} />
               </Link>
             </li>
           ))}
@@ -115,7 +127,7 @@ export default function Footer() {
         <ul>
           {AboutUs.map((item) => (
             <li key={item.name}>
-              <Link className="underline mb-1" href={item.link}>
+              <Link className="underline mb-1" href={item.link} target="_blank">
                 {item.name}
               </Link>
             </li>
@@ -140,7 +152,7 @@ export default function Footer() {
             { name: "Events", link: CYBERROOTSUMMIT },
           ].map((item) => (
             <li key={item.name}>
-              <Link href={item.link} className="underline mb-1">
+              <Link href={item.link} className="underline mb-1" target="_blank">
                 {item.name}
               </Link>
             </li>

@@ -27,8 +27,8 @@ export default function Ads() {
       <div className="bg-brightNavyBlue bg-firstAdPicture-bg bg-cover py-10">
         <div className="max-w-[1500px] text-white text-center space-y-3 mx-auto w-[80%]">
           <Heading variant={"xl"} level={"h3"}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            quam.
+            Ready to safeguard your assets and take your security to the next
+            level?
           </Heading>
           <Text>Let CyberRoot protect what's important to you.</Text>
         </div>
@@ -36,8 +36,8 @@ export default function Ads() {
       <div className="bg-brightNavyBlue bg-firstAdPicture-bg bg-cover py-10">
         <div className="max-w-[1500px] text-white text-center space-y-3 mx-auto w-[80%]">
           <Heading variant={"xl"} level={"h3"}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            quam.
+            Ready to safeguard your assets and take your security to the next
+            level?
           </Heading>
           <Text>Let CyberRoot protect what's important to you.</Text>
         </div>

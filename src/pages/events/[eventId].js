@@ -52,6 +52,24 @@ export default function EventId() {
               </label>
               <input type="text" className={inputStyles} />
             </div>
+            <div className="space-y-1">
+              <label
+                htmlFor="designation"
+                className="block text-brightNavyBlue"
+              >
+                Designation
+              </label>
+              <input type="text" className={inputStyles} />
+            </div>
+            <div className="space-y-1">
+              <label
+                htmlFor="institution"
+                className="block text-brightNavyBlue"
+              >
+                Institution
+              </label>
+              <input type="text" className={inputStyles} />
+            </div>
             <Button
               style={"px-8 bg-brightNavyBlue text-white py-2 rounded-full"}
             >

@@ -50,6 +50,7 @@ function EventsCard({ title, date, desc, id }) {
       </p>
       <Link
         href={EVENT_PAGES(id)}
+        target="_blank"
         className="border border-white text-sm rounded-lg px-2 py-1"
       >
         Register for free

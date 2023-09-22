@@ -144,13 +144,15 @@ export default function Header({
             {[
               { name: "Events", url: CYBERROOTSUMMIT },
               { name: "blog", url: BLOG },
-              { name: "training", url: TRAINING },
+              // { name: "training", url: TRAINING },
             ].map((item) => (
               <li
                 className="text-base m:text-lg lg:text-xl text-white m:text-black capitalize"
                 key={item.name}
               >
-                <Link href={item.url}>{item.name}</Link>
+                <Link href={item.url} target="_blank">
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
